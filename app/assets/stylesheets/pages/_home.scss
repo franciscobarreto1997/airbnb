@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+.container {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 900,
+}
