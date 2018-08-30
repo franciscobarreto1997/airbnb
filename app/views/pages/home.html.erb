@@ -1,14 +1,12 @@
 <class class="container">
   <h1>Book unique homes and<br>experiences all over the world.</h1>
-  <% @categories.each do |category| %>
-    <%= form_tag category_path(category), method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Search Flats"
+  <%= form_tag categories_path, method: :get, :class => 'form' do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+    placeholder: "Search Flats"
     %>
-  <% end %>
-  <% end %>
+    <% end %>
 </class>
 
 

@@ -27,6 +27,7 @@ end
 
 
 
+
 10.times do
   Flat.create!(title: titles.sample, description: descriptions.sample, price: prices.sample, latitude: latitudes.sample, longitude: longitudes.sample, category_id: Category.all.sample.id, user_id: User.first.id)
 end
