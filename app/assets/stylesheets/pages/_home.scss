@@ -1,13 +1,22 @@
 // Specific CSS for your home-page
 .container {
-  display: flex;
-  height: 90vh;
-  width: 182vh;
+  display: block;
+  height: 39.1em;
+  width: 71.1em;
+  background-image: url('http://res.cloudinary.com/franciscobarreto/image/upload/v1535468337/halmx0jyrwobxoyzgjmw.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
 }
 
 .container h1 {
   font-family: 'Raleway', sans-serif;
-  margin-top: 150px;
-  margin-left: 130px;
+  margin-top: 200px;
+  margin-left: 170px;
+  color: white;
+}
+
+.container .form {
+  width: 40em;
 }
 
