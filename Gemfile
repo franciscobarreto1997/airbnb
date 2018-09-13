@@ -11,6 +11,7 @@ gem 'redis'
 gem 'carrierwave', '~> 1.2'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
+gem 'sprockets-rails'
 
 
 gem 'autoprefixer-rails'
