@@ -1,8 +1,16 @@
 <div class="navbar-wagon-2">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand-2" do %>
-    <%= image_tag "airbnblogo.png", height: 40 %>
+    <%= image_tag "airbnblogocolor2.png", height: 40 %>
   <% end %>
+
+  <%= form_tag categories_path, method: :get, :class => 'form' do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+    placeholder: "Search Flats"
+    %>
+    <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right-2 hidden-xs hidden-sm">
@@ -39,7 +47,7 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item-2 navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item-2 navbar-wagon-link-2" %>
     <% end %>
   </div>
 
