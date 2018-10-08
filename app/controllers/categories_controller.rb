@@ -5,10 +5,10 @@ class CategoriesController < ApplicationController
       @flats = Flat.where(category_id: @categories.ids)
     else
       @categories = Category.all
+      @flats = Flat.all
     end
   end
 
   def show
-
   end
 end

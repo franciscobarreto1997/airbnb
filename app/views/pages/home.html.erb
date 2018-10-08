@@ -1,11 +1,7 @@
 <div class="container">
   <h1>Book unique homes and<br>experiences all over the world.</h1>
   <%= form_tag categories_path, method: :get, :class => 'form' do %>
-  <%= text_field_tag :query,
-  params[:query],
-  class: "form-control",
-    placeholder: "Search Flats"
-    %>
+  <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search Flats" %>
     <% end %>
     <div class="love">
       <p>Made with love by Francisco Barreto</p>

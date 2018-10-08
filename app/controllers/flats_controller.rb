@@ -20,4 +20,8 @@ class FlatsController < ApplicationController
 
   def destroy
   end
+
+  def flats_params
+    params.require(:flat).permit(:title, :description, :price, :category_id)
+  end
 end
