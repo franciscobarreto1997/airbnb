@@ -1,13 +1,15 @@
 <div class="container-2">
   <% @flats.each do |flat| %>
   <div class="card">
-    <div class="media red">
-      <div class="circle">
-        <span class="badge"><i class="fa fa-book"></i></span>
-      </div>
+    <div class="pic" style="background-image: url('<%= cl_image_path flat.photo, height: 300, width: 400, crop: :fill %>')">
+
     </div>
-    <h3><%= flat.title %></h3>
-    <p> <%= flat.description %></p>
+    <h5>
+      <strong>
+        <%= flat.title %>
+      </strong>
+    </5>
+    <p> <%= flat.price %>€</p>
   </div>
   <% end %>
 </div>
