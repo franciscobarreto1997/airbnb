@@ -1,15 +1,17 @@
 <div class="container-2">
   <% @flats.each do |flat| %>
   <div class="card">
-    <div class="pic" style="background-image: url('<%= cl_image_path flat.photo, height: 300, width: 400, crop: :fill %>')">
+    <%= link_to flat_path(flat) do %>
+        <div class="pic" style="background-image: url('<%= cl_image_path flat.photo, height: 300, width: 400, crop: :fill %>')">
 
-    </div>
-    <h5>
-      <strong>
-        <%= flat.title %>
-      </strong>
-    </5>
-    <p> <%= flat.price %>€</p>
-  </div>
+        </div>
+        <h5>
+          <strong>
+            <%= flat.title %>
+          </strong>
+        </5>
+        <p> <%= flat.price %>€</p>
+      </div>
+    <% end %>
   <% end %>
 </div>
