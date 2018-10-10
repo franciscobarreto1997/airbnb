@@ -1,2 +1,9 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+<div class="container3">
+  <div class="title-container">
+    <p> <%= @category.name %> </p>
+    <h2> <%= @flat.title %> </h2>
+  </div>
+  <div class="photo">
+    <%= cl_image_tag( @flat.photo, crop: :fill )  %>
+  </div>
+</div>

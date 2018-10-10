@@ -1,0 +1,27 @@
+.container3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  margin: 15px;
+  background-color: #F2F2F2;
+}
+
+.photo {
+  height: 500px;
+  width: 700px;
+  align-self: flex-end;
+  margin: 15px;
+  flex-grow: 2;
+  img  {
+    height: 100%;
+    width: 100%;
+  }
+}
