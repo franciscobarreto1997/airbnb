@@ -5,6 +5,7 @@ class FlatsController < ApplicationController
 
   def show
     @flat = Flat.find(params[:id])
+    @category = Category.where(id: @flat.category_id).first
   end
 
   def new
