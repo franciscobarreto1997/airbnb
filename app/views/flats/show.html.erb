@@ -1,9 +1,12 @@
 <div class="container3">
   <div class="title-container">
-    <p> <%= @category.name %> </p>
+    <p> <%= @category.name.upcase %> </p>
     <h2> <%= @flat.title %> </h2>
   </div>
-  <div class="photo">
-    <%= cl_image_tag( @flat.photo, crop: :fill )  %>
+  <div class="photo" style="background-image: url('<%= cl_image_path @flat.photo, crop: :fill %>')">
+
   </div>
+</div>
+<div class="container4">
+
 </div>
