@@ -11,7 +11,7 @@ puts "Destroying all existing data..."
 Flat.destroy_all
 Category.destroy_all
 
-puts "Creating 30 test flats..."
+puts "Creating 10 test flats..."
 puts "Creating 4 test categories..."
 
 titles = [
@@ -58,15 +58,20 @@ photos = [
 end
 
 
-30.times do
-  Flat.create!(
-                title: titles.sample,
-                description: descriptions.sample,
-                price: prices.sample,
-                latitude: latitudes.sample,
-                longitude: longitudes.sample,
-                category_id: Category.all.sample.id,
-                user_id: User.first.id,
-                remote_photo_url: photos.sample
-              )
+# 10.times do
+#   Flat.create!(
+#                 title: titles.sample,
+#                 description: descriptions.sample,
+#                 price: prices.sample,
+#                 latitude: latitudes.sample,
+#                 longitude: longitudes.sample,
+#                 category_id: Category.all.sample.id,
+#                 user_id: User.first.id,
+#                 remote_photo_url: photos.sample
+#               )
+# end
+
+
+titles.zip(descriptions, prices, latitudes, longitudes, photos).each do |title, description, price, latitude, longitude, photo|
+  Flat.create!(title: title, description: description, price: price, latitude: latitude, longitude: longitude, category_id: Category.all.sample.id, user_id: User.first.id, remote_photo_url: photo)
 end
