@@ -3,10 +3,11 @@
     <p> <%= @category.name.upcase %> </p>
     <h2> <%= @flat.title %> </h2>
   </div>
-  <div class="photo" style="background-image: url('<%= cl_image_path @flat.photo, crop: :fill %>')">
+  <div class="photo" style="background-image: url('<%= cl_image_path @flat.photo %>')">
 
   </div>
 </div>
 <div class="container4">
-
+  <p id="flat-description"> <%= @flat.description %></p>
+  <p> <%= @user.email %></p>
 </div>

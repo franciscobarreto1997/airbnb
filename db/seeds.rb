@@ -26,16 +26,27 @@ titles = [
           "3 Bedroom Condo"
           ]
 descriptions = [
-                "nice",
-                "good",
-                "amazing",
-                "fantastic",
-                "great",
-                "very very good",
-                "lots of light",
-                "excelent",
-                "noice",
-                "perfect"
+                "Soak up the natural light spilling into every corner of this spacious 19th-century apartment or kick back
+                 in the quiet inner courtyard. This centrally located home effortlessly combines classic vintage with contemporary
+                 design and amenities.2 guestsStudio2 beds1 bath",
+                "Wake up to the unique light of Lisbon at a historic building in the heart of pedestrian Alfama. Get lost in a book
+                 by the window, or head out through the bright orange door on a mission to find the perfect Portuguese custard tart.",
+                "Relax in style at this cozy ground-floor apartment situated in a small, traditional building in historic Madragoa.
+                 Crisp, white walls, hardwood floors, and patterned tiles give this home an authentic and inviting Portuguese feel.",
+                "Discover the charms of living in the heart of Lisbon's old city while enjoying the conveniences of a renovated flat.
+                 The high ceilings, tall windows, and original woodwork are turn-of-the-century, but the kitchen and bathrooms are state-of-the-art.",
+                "Start the day under a steaming rain shower in a bathroom lined with stone in this fully restored and charming Martim Vaz studio. Enjoy
+                 breakfast on the balcony while admiring stunning views of São Jorge Castle.",
+                "Unwind in this first-floor designer apartment featuring eclectic and carefully curated decor, elegant furnishings, and a spacious
+                 open-plan layout. Soak up the natural light at the dining table, or fix a picnic meal and head to the nearby park.",
+                "Throw open the windows and let a soft breeze glide through this calm, radiant apartment. Sprawl out on a leather couch
+                 and find your center amid modern furnishings and vaulted ceilings. Move to the romantic, rose-colored patio for drinks at sundown.",
+                "Soak up the sun on the terrace outside this open-plan studio apartment. After enjoying some fresh air, retreat in for a meal and a
+                chilled glass of Portuguese wine in the functional kitchen. Guests will love the central location and indoor parking.",
+                "Drink in the great aerial views of Lisbon while enjoying a glass of wine or cup of coffee on the terrace. Then head back in to enjoy
+                 the modern conveniences that are evident throughout this well-decorated, air-conditioned, and heated apartment.",
+                "This duplex apartment with a patio is on the 4th and last floor of a building in Chiado. It was just entirely renovated. A very comfortable
+                 lounge area with a Patio and a kitchenette and a bathroom on the lower floor. It is the ideal place to stay!"
               ]
 prices = [200, 500, 250, 700, 100, 80, 150, 345, 1000, 420]
 latitudes = [42.40, 35.05, 35.11, 61.13, 33.45, 30.16, 44.47, 39.18, 44.48, 33.30]
@@ -57,7 +68,6 @@ photos = [
   Category.create!(name: name)
 end
 
-
 # 10.times do
 #   Flat.create!(
 #                 title: titles.sample,
@@ -70,7 +80,6 @@ end
 #                 remote_photo_url: photos.sample
 #               )
 # end
-
 
 titles.zip(descriptions, prices, latitudes, longitudes, photos).each do |title, description, price, latitude, longitude, photo|
   Flat.create!(title: title, description: description, price: price, latitude: latitude, longitude: longitude, category_id: Category.all.sample.id, user_id: User.first.id, remote_photo_url: photo)
