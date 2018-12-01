@@ -7,11 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   border-bottom: 1px solid #F4F3F1;
+  z-index: 1;
 }
 
 .navbar-wagon-2 .form-control {

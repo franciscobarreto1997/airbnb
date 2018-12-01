@@ -1,0 +1,72 @@
+/* Main navbar */
+.navbar-wagon-3 {
+    transition: all 0.3s ease;
+    background: white;
+    height: 80px;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #F4F3F1;
+  }
+  
+  .navbar-wagon-3 .form-control {
+    width: 25em;
+    color: #484848;
+    margin-top: 10px;
+    box-shadow: 0px 1px 1px 1px #F4F3F1;
+    font-weight: 700;
+  }
+  
+  .navbar-wagon-3 .form-control:hover {
+    box-shadow: 0px 3px 3px 3px #F4F3F1;
+  }
+  
+  
+  
+  /* Logo */
+  .navbar-wagon-brand-3 img {
+    height: 50px;
+    margin-top: 10px;
+  }
+  
+  /* User Avatar */
+  .navbar-wagon-3 .avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+  
+  /* Right section */
+  .navbar-wagon-right-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Basic navbar item */
+  .navbar-wagon-item-3 {
+    cursor: pointer;
+    padding: 0 20px;
+    margin-top: 10px;
+    color: #484848;
+  }
+  
+  /* Navbar link */
+  .navbar-wagon-link-3 {
+    color: #484848;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 24px 20px;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar-wagon-link-3:hover {
+    color: #484848;
+    text-decoration: none;
+    border-bottom: 2px solid #484848;
+  }
+  

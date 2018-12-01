@@ -13,8 +13,10 @@
   <body>
     <% if controller_name  == "pages" && action_name == "home"%>
       <%= render 'shared/navbar' %>
-    <% else %>
+    <% elsif controller_name == "categories" && action_name == "index" %>
       <%= render 'shared/navbar2' %>
+    <% else %>
+      <%= render 'shared/navbar3' %>
     <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
