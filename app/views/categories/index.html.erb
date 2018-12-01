@@ -1,25 +1,13 @@
 <div class="container-5">
   <div class="container-2">
-    <% @flats.each do |flat| %>
-    <div class="card">
-      <%= link_to flat_path(flat) do %>
-          <div class="pic" style="background-image: url('<%= cl_image_path flat.photo, crop: :fill %>')">
-
-          </div>
-          <h5>
-            <strong>
-              <%= flat.title %>
-            </strong>
-          </h5>
-          <p> <%= flat.price %>€</p>
-        </div>
-      <% end %>
-    <% end %>
+    <div class="container-6">
+        <h4><strong>Explore all <%= @flats.count %> homes </strong></h4>
+    </div>
+      <%= render 'shared/card' %>
   </div>
   <div
     id="map"
-    style="width: 40%;
-    height: 89vh;"
+    style="width: 35%; height: 89vh;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
