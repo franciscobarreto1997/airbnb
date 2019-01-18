@@ -49,8 +49,6 @@ descriptions = [
                  lounge area with a Patio and a kitchenette and a bathroom on the lower floor. It is the ideal place to stay!"
               ]
 prices = [200, 500, 250, 700, 100, 80, 150, 345, 1000, 420]
-latitudes = [42.40, 35.05, 35.11, 61.13, 33.45, 30.16, 44.47, 39.18, 44.48, 33.30]
-longitudes = [73.45, 106.39, 101.50, 149.54, 84.23, 97.44, 117.50, 76.38, 68.47, 71.5]
 photos = [
           "https://images.unsplash.com/photo-1529408632839-a54952c491e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bdbf4c2018645e98f7ff266db847f999&auto=format&fit=crop&w=1500&q=80",
           "https://images.unsplash.com/photo-1529408686214-b48b8532f72c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=986e2dee5c1b488d877ad7ba1afaf2ec&auto=format&fit=crop&w=1500&q=80",
@@ -64,7 +62,25 @@ photos = [
           "https://images.unsplash.com/photo-1494203484021-3c454daf695d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=87489e9e4b1f12ce68f0c790d2c39682&auto=format&fit=crop&w=1500&q=80"
         ]
 
-["Modern", "Luxury", "Seaside", "Vintage"].each do |name|
+addresses = [
+              "R. Moeda 7, 1200-109 Lisboa",
+              "Av. 24 de Julho s/n, 1200-481 Lisboa",
+              "R. da Misericórdia 9, 1200-283 Lisboa",
+              "R. Dom Pedro V Nº56-D, 1250-094 Lisboa",
+              "Largo do Intendente Pina Manique 45, 1100-285 Lisboa",
+              "Tv. do Monte 26, 1170-108 Lisboa",
+              "Terreiro do Paço – Ala Nascente nº 62 a 65, 1100-148 Lisboa",
+              "Rua dos Bacalhoeiros, 10, 1100-135 Lisboa",
+              "Praça do Príncipe Real 5, 1250-096 Lisboa",
+              "Rua de Arroios 25, 1150-053 Lisboa",
+              "Av. 24 de Julho 68, 1200-869 Lisboa"
+          ]
+
+# ["Modern", "Luxury", "Seaside", "Vintage"].each do |name|
+#   Category.create!(name: name)
+# end
+
+["Modern"].each do |name|
   Category.create!(name: name)
 end
 
@@ -81,6 +97,6 @@ end
 #               )
 # end
 
-titles.zip(descriptions, prices, latitudes, longitudes, photos).each do |title, description, price, latitude, longitude, photo|
-  Flat.create!(title: title, description: description, price: price, latitude: latitude, longitude: longitude, category_id: Category.all.sample.id, user_id: User.first.id, remote_photo_url: photo)
+titles.zip(descriptions, prices, addresses, photos).each do |title, description, price, address, photo|
+  Flat.create!(title: title, description: description, price: price, address: address, category_id: Category.all.sample.id, user_id: User.first.id, remote_photo_url: photo)
 end
