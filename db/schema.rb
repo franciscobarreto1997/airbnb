@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_193350) do
+ActiveRecord::Schema.define(version: 2019_02_11_184403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,8 +44,25 @@ ActiveRecord::Schema.define(version: 2018_11_27_193350) do
     t.datetime "updated_at", null: false
     t.string "photo"
     t.string "address"
+    t.integer "acommodates"
+    t.bigint "home_type_id"
+    t.bigint "room_type_id"
     t.index ["category_id"], name: "index_flats_on_category_id"
+    t.index ["home_type_id"], name: "index_flats_on_home_type_id"
+    t.index ["room_type_id"], name: "index_flats_on_room_type_id"
     t.index ["user_id"], name: "index_flats_on_user_id"
+  end
+
+  create_table "home_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "room_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -68,5 +85,7 @@ ActiveRecord::Schema.define(version: 2018_11_27_193350) do
   add_foreign_key "bookings", "flats"
   add_foreign_key "bookings", "users"
   add_foreign_key "flats", "categories"
+  add_foreign_key "flats", "home_types"
+  add_foreign_key "flats", "room_types"
   add_foreign_key "flats", "users"
 end
