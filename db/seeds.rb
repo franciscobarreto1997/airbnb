@@ -10,9 +10,13 @@ puts "Destroying all existing data..."
 
 Flat.destroy_all
 Category.destroy_all
+RoomType.destroy_all
+HomeType.destroy_all
 
-puts "Creating 10 test flats..."
-puts "Creating 4 test categories..."
+puts "Creating 10 Test Flats..."
+puts "Creating 1 Test Category..."
+puts "Creating 2 Home Types..."
+puts "Creating 3 Room Types..."
 
 titles = [
           "Downtown Private Room",
@@ -84,6 +88,14 @@ addresses = [
   Category.create!(name: name)
 end
 
+["Apartment", "House"].each do |name|
+  HomeType.create!(name: name)
+end
+
+["Entire Home", "Private Room", "Shared Room"].each do |name|
+  RoomType.create!(name: name)
+end
+
 # 10.times do
 #   Flat.create!(
 #                 title: titles.sample,
@@ -98,5 +110,5 @@ end
 # end
 
 titles.zip(descriptions, prices, addresses, photos).each do |title, description, price, address, photo|
-  Flat.create!(title: title, description: description, price: price, address: address, category_id: Category.all.sample.id, user_id: User.first.id, remote_photo_url: photo)
+  Flat.create!(title: title, description: description, price: price, address: address, category_id: Category.all.sample.id, user_id: User.first.id, remote_photo_url: photo, home_type_id: HomeType.all.sample.id, room_type_id: RoomType.all.sample.id)
 end

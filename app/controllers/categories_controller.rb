@@ -1,8 +1,8 @@
 class CategoriesController < ApplicationController
   def index
     if params[:query].present?
-      @categories = Category.where(name: params[:query])
-      @flats = Flat.where(category_id: @categories.ids)
+      @category = Category.where(name: params[:query])
+      @flats = Flat.where(category_id: @category.ids)
 
       @markers = @flats.map do |flat|
         {
@@ -13,6 +13,13 @@ class CategoriesController < ApplicationController
     else
       @categories = Category.all
       @flats = Flat.all
+
+      @markers = @flats.map do |flat|
+        {
+          lng: flat.longitude,
+          lat: flat.latitude
+        }
+      end
     end
   end
 
