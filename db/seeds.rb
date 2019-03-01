@@ -13,7 +13,7 @@ Category.destroy_all
 RoomType.destroy_all
 HomeType.destroy_all
 
-puts "Creating 1 Test Category..."
+puts "Creating 1 Category..."
 puts "Creating 2 Home Types..."
 puts "Creating 3 Room Types..."
 

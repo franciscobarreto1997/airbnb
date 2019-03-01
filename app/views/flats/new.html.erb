@@ -5,11 +5,11 @@
 <div class="form-background">
   <%= simple_form_for(@flat) do |f| %>
     <%= f.label "Home Type" %>
-    <%= f.select :home_type_id, [5, 6] %>
+    <%= f.select :home_type_id, ["Apartment", "House"] %>
     <%= f.label "Room Type" %>
-    <%= f.select :room_type_id, [7, 8, 9] %>
+    <%= f.select :room_type_id, ["Entire Home", "Private Room", "Shared Room"] %>
     <%= f.label "Category" %>
-    <%= f.select :category_id, [24] %>
+    <%= f.select :category_id, ["Modern"] %>
     <%= f.label "Acommodates" %>
     <%= f.select :acommodates, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] %>
     <%= f.label "Title" %>
