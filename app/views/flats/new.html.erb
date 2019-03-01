@@ -1,2 +1,29 @@
-<h1>Flats#new</h1>
-<p>Find me in app/views/flats/new.html.erb</p>
+<div class="container5">
+  <h3>List your space</h3>
+  <p>Airbnb lets you make money renting out your place.</p>
+</div>
+<div class="form-background">
+  <%= simple_form_for(@flat) do |f| %>
+    <%= f.label "Home Type" %>
+    <%= f.select :home_type_id, [5, 6] %>
+    <%= f.label "Room Type" %>
+    <%= f.select :room_type_id, [7, 8, 9] %>
+    <%= f.label "Category" %>
+    <%= f.select :category_id, [24] %>
+    <%= f.label "Acommodates" %>
+    <%= f.select :acommodates, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] %>
+    <%= f.label "Title" %>
+    <%= f.text_field :title %>
+    <%= f.label "Description" %>
+    <%= f.text_field :description %>
+    <%= f.label "Price (per night)" %>
+    <%= f.text_field :price %>
+    <%= f.label "Address" %>
+    <%= f.text_field :address %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
+

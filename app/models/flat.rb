@@ -10,13 +10,10 @@ class Flat < ApplicationRecord
   belongs_to :room_type
 
   validates :title, presence: true
-  validates :title, length: { in: 10..50 }
+  #validates :title, length: { in: 10..50 }
   validates :description, presence: true
   validates :price, presence: true
   validates :address, presence: true
-
-
-
 
   # validates :user_id, uniqueness: true
 
