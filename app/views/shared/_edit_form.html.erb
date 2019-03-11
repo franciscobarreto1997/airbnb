@@ -1,0 +1,21 @@
+<%= simple_form_for @flat, html: {id: "update_form"} do |f| %>
+  <%= f.label "Home Type" %>
+  <%= f.select :home_type_id, ["Apartment", "House"] %>
+  <%= f.label "Room Type" %>
+  <%= f.select :room_type_id, ["Entire Home", "Private Room", "Shared Room"] %>
+  <%= f.label "Category" %>
+  <%= f.select :category_id, ["Modern"] %>
+  <%= f.label "Acommodates" %>
+  <%= f.select :acommodates, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15] %>
+  <%= f.label "Title" %>
+  <%= f.text_field :title ,placeholder: "Give your place a stylish title", required: true %>
+  <%= f.label "Description" %>
+  <%= f.text_field :description, placeholder: "Describe your place", required: true %>
+  <%= f.label "Price (per night)" %>
+  <%= f.text_field :price, placeholder: "Enter the price of your place", required: true %>
+  <%= f.label "Address" %>
+  <%= f.text_field :address, placeholder: "Where is your place?" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit %>
+<% end %>

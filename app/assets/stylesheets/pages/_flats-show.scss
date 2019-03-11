@@ -28,6 +28,15 @@
   width: 70%;
   margin: 15px;
   background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+
+  i {
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 }
 
 .container4 {
@@ -38,6 +47,6 @@
   margin: 70px 40px 40px 40px;
 
   #flat-description {
-    max-width: 45vw;  
+    max-width: 45vw;
   }
 }
