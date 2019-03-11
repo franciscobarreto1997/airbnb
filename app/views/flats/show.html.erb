@@ -4,7 +4,11 @@
     <h2> <%= @flat.title %> </h2>
   </div>
   <div class="photo" style="background-image: url('<%= cl_image_path @flat.photo %>')">
-
+    <% if @flat.user = current_user %>
+      <%= link_to edit_flat_path do %>
+        <i class="fas fa-edit"></i>
+      <% end %>
+    <% end %>
   </div>
 </div>
 <div class="container4">
