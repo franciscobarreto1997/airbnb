@@ -8,6 +8,9 @@
       <%= link_to edit_flat_path do %>
         <i class="fas fa-edit"></i>
       <% end %>
+      <%= link_to flat_path(@flat), method: :delete, data: { confirm: "This will remove your flat, are you sure?" } do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
     <% end %>
   </div>
 </div>
