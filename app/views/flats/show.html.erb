@@ -4,10 +4,12 @@
     <h2> <%= @flat.title %> </h2>
   </div>
   <div class="photo" style="background-image: url('<%= cl_image_path @flat.photo %>')">
-    <% if @flat.user = current_user %>
+    <% if policy(@flat).edit? %>
       <%= link_to edit_flat_path do %>
         <i class="fas fa-edit"></i>
       <% end %>
+    <% end %>
+    <% if policy(@flat).destroy? %>
       <%= link_to flat_path(@flat), method: :delete, data: { confirm: "This will remove your flat, are you sure?" } do %>
         <i class="fas fa-trash-alt"></i>
       <% end %>
