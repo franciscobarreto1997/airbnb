@@ -3,7 +3,8 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @flats = Flat.all
+    # @flats = Flat.all
+    @flats = policy_scope(Flat)
   end
 
   def show
@@ -13,11 +14,13 @@ class FlatsController < ApplicationController
 
   def new
     @flat = Flat.new
+    authorize @flat
   end
 
 def create
     @flat = Flat.new(flat_params)
     @flat.user_id = current_user.id
+    authorize @flat
     if flat_params[:home_type_id] == "Apartment"
       @flat.home_type_id = 5
     else
@@ -36,7 +39,7 @@ def create
       puts "There is only 1 category how is this possible?!"
     end
     if @flat.save
-      redirect_to flat_path(@flat)
+      redirect_to flat_path(@flat), notice: "Restaurant was successfully created"
     else
       puts @flat.errors.messages
     end
@@ -73,7 +76,7 @@ def create
 
   def destroy
     if @flat.destroy
-      redirect_to flats_path
+      redirect_to categories_path(:query => "Modern"), notice: "Restaurant was successfully destroyed"
     else
       puts @flat.errors.messages
     end
@@ -88,27 +91,6 @@ def create
 
   def set_flat
     @flat = Flat.find(params[:id])
+    authorize @flat
   end
-
-  # This method transforms the strings that we get in the form params into the integers (id's) that we
-  # actually want
-  # def make_those_forms_work(params)
-  #   if params[:home_type_id] == "Apartment"
-  #     @flat.home_type_id = 5
-  #   else
-  #     @flat.home_type_id = 6
-  #   end
-  #   if params[:room_type_id] == "Entire Home"
-  #     @flat.home_type_id = 7
-  #   elsif params[:room_type_id] == "Private Room"
-  #     @flat.room_type_id = 8
-  #   else
-  #     @flat.room_type_id = 9
-  #   end
-  #   if params[:category_id] == "Modern"
-  #     @flat.category_id = 24
-  #   else
-  #     puts "There is only 1 category how is this possible?!"
-  #   end
-  # end
 end

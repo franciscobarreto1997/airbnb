@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     if params[:query].present?
-      @category = Category.where(name: params[:query])
+      @category = policy_scope(Category).where(name: params[:query])
       @flats = Flat.where(category_id: @category.ids)
 
       @markers = @flats.map do |flat|
