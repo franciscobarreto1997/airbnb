@@ -4,11 +4,14 @@
           <div class="pic" style="background-image: url('<%= cl_image_path flat.photo, crop: :fill %>')">
           </div>
           <h5>
+            <%= flat.room_type.name.upcase %>
+          </h5>
+          <h6>
             <strong>
               <%= flat.title %>
             </strong>
-          </h5>
-          <p> <%= flat.price %>€</p>
+          </h6>
+          <p> €<%= flat.price %> per night</p>
     </div>
       <% end %>
 <% end %>

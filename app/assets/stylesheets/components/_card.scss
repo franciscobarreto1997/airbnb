@@ -1,7 +1,7 @@
 .card {
   width: 21em;
   height: 260px;
-  margin: 15px 3px 60px 15px;
+  margin: 15px 3px 86px 15px;
 
   a {
     color: black;
@@ -9,12 +9,20 @@
   }
 
   h5 {
-    margin-top: 5px;
+    color: #7A7A7A;
+    font-size: 13px;
   }
 
+  h6 {
+    color: #484848;
+    margin-top: -9px;
+  }
 
   p {
-    margin-top: -11px;
+    margin-top: -9px;
+    font-size: 15px;
+    color: #767676;
+    font-weight: 400;
   }
 }
 
