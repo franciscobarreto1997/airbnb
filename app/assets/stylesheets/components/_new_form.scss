@@ -1,7 +1,149 @@
 #new_flat {
-  display: flex;
-  flex-direction: column;
+  margin-top: 50px;
+  width: 60%;
+  display: grid;
+  // grid-template: repeat(8, auto) / 40% 20% 20% 20%;
+  grid-template-columns: 40% 20% 20% 20%;
+  grid-template-rows: auto;
+  grid-gap: 40px 0px;
+  justify-items: stretch;
   label {
-    font-size: 25px;
+    font-size: 23px;
+    font-weight: 400;
+    place-self: center;
+    grid-column: 1 / 2;
+    color: #5B5F61;
+  }
+  span {
+    label {
+      font-size: 18px;
+      place-self: center;
+      padding: 20px;
+      width: 180px;
+      height: 60px;
+    }
+  }
+  select, input {
+    grid-column: 2 / 3;
+    justify-self: start;
+  }
+  @for $i from 1 through 2 {
+    #flat_home_type_id_#{$i} {
+      visibility: hidden;
+    }
+  }
+  @for $i from 1 through 3 {
+    #flat_room_type_id_#{$i} {
+      visibility: hidden;
+    }
+  }
+  .collection_radio_buttons {
+    cursor: pointer;
+    border: 1px solid #C7C7C7;
+    background: white;
+  }
+  input:checked + label {
+    border: 2px solid #029AAB;
+  }
+  select {
+    width: 190px;
+    background-color: white;
+    border: 1px solid #C7C7C7;
+    padding: 20px;
+    width: 160px;
+    height: 60px;
+    border-radius: none;
   }
 }
+
+// #new_flat {
+//   display: grid;
+//   width: 60%;
+//   grid-template-columns: 25% 25% 25% 25%;
+//   grid-template-rows: auto;
+//   grid-template-areas:
+//    "home-type-label flat-home-type-id-1 flat-home-type-id-2 ."
+//    "room-type-label flat-room-type-id-1 flat-room-type-id-2 flat-room-type-id-3"
+//    "acommodates-label flat-acommodates . ."
+//    "address-label address-input . ."
+//    "title-label title-input . ."
+//    "description-label description-input . ."
+//    "price-label price-input . ."
+//    "photo-label . flat-photo . ";
+
+//   .home-type-label {
+//     grid-area: home-type-label;
+//   }
+
+//   #flat_home_type_id_1 {
+//     grid-area: flat-home-type-id-1;
+//   }
+
+//   #flat_home_type_id_2 {
+//     grid-area: flat-home-type-id-2;
+//   }
+
+//   .room-type-label {
+//     grid-area: room-type-label;
+//   }
+
+//   #flat_room_type_id_1 {
+//     grid-area: flat-room-type-id-1;
+//   }
+
+//   #flat_room_type_id_2 {
+//     grid-area: flat-room-type-id-2;
+//   }
+
+//   #flat_room_type_id_3 {
+//     grid-area: flat-room-type-id-3;
+//   }
+
+//   .acommodates-label {
+//     grid-area: acommodates-label;
+//   }
+
+//   #flat-acommodates {
+//     grid-area: flat-acommodates;
+//   }
+
+//   .address-label {
+//     grid-area: address-label;
+//   }
+
+//   .address-input {
+//     grid-area: address-input;
+//   }
+
+//   .title-label {
+//     grid-area: title-label;
+//   }
+
+//   .title-input {
+//     grid-area: title-input;
+//   }
+
+//   .description-label {
+//     grid-area: description-label;
+//   }
+
+//   .description-input {
+//     grid-area: description-input;
+//   }
+
+//   .price-label {
+//     grid-area: price-label;
+//   }
+
+//   .price-input {
+//     grid-area: price-input;
+//   }
+
+//   .file {
+//     grid-area: photo-label;
+//   }
+
+//   #flat_photo {
+//     grid-area: flat-photo;
+//   }
+// }

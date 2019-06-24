@@ -17,13 +17,14 @@ class FlatsController < ApplicationController
     authorize @flat
   end
 
-def create
+  def create
     @flat = Flat.new(flat_params)
     @flat.user_id = current_user.id
     authorize @flat
     if @flat.save
-      redirect_to flat_path(@flat), notice: "Restaurant was successfully created"
+      redirect_to flat_path, notice: "Flat was successfully created"
     else
+      render :new
       puts @flat.errors.messages
     end
   end
@@ -41,7 +42,7 @@ def create
 
   def destroy
     if @flat.destroy
-      redirect_to categories_path(:query => "Modern"), notice: "Restaurant was successfully destroyed"
+      redirect_to categories_path(:query => "Modern"), notice: "Flat was successfully destroyed"
     else
       puts @flat.errors.messages
     end
