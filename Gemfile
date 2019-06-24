@@ -14,7 +14,7 @@ gem 'cloudinary'
 gem 'sprockets-rails'
 gem 'geocoder'
 gem 'pundit'
-
+gem 'jquery-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
