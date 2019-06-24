@@ -54,6 +54,13 @@
     height: 60px;
     border-radius: none;
   }
+  .submit {
+    background-color: #FF5A5F;
+    color: white;
+    &:hover {
+      border: 1px solid white;
+    }
+  }
 }
 
 // #new_flat {
