@@ -9,18 +9,13 @@
 puts "Destroying all existing data..."
 
 Flat.destroy_all
-Category.destroy_all
 RoomType.destroy_all
 HomeType.destroy_all
 
-puts "Creating 1 Category..."
 puts "Creating 2 Home Types..."
 puts "Creating 3 Room Types..."
 
 
-["Modern"].each do |name|
-  Category.create!(name: name)
-end
 
 ["Apartment", "House"].each do |name|
   HomeType.create!(name: name)

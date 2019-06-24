@@ -3,12 +3,15 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @flats = Flat.all
+    if params[:query].present?
+      @flats = Flat.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @flats = Flat.all
+    end
     @flats = policy_scope(Flat)
   end
 
   def show
-    @category = Category.where(id: @flat.category_id).first
     @user = @flat.user
   end
 

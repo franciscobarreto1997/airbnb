@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :categories, only: [:index, :show]
   resources :flats, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :bookings, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
