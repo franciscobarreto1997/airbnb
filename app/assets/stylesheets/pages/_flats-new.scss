@@ -15,3 +15,54 @@
   align-items: center;
   background-color: #F5F5F5;
 }
+
+.additional-info {
+  display: grid;
+  margin-top: 10%;
+  width: 60%;
+  grid-template-column: 100%;
+  grid-gap: 25px;
+  grid-template-areas:
+   "trust-safety"
+   "host-guarantee"
+   "secure-payments";
+}
+
+
+.info-card {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  i {
+    font-size: 60px;
+    color: #029AAB;
+  }
+  h4 {
+    font-weight: 700;
+  }
+  h4, p {
+    display: block;
+  }
+}
+
+#trust-safety {
+  grid-area: trust-safety;
+}
+#host-guarantee {
+  grid-area: host-guarantee;
+}
+#secure-payments {
+  grid-area: secure-payments;
+}
+
+@media screen and (min-width: 736px) {
+  .additional-info {
+    display: grid;
+    margin-top: 10%;
+    width: 60%;
+    grid-template-column: 33% 33% 33%;
+    grid-gap: 25px;
+    grid-template-areas: "trust-safety host-guarantee secure-payments";
+  }
+}
+
