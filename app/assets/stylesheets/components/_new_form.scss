@@ -27,12 +27,12 @@
     grid-column: 2 / 3;
     justify-self: start;
   }
-  @for $i from 1 through 2 {
+  @for $i from 5 through 6 {
     #flat_home_type_id_#{$i} {
       visibility: hidden;
     }
   }
-  @for $i from 1 through 3 {
+  @for $i from 7 through 9 {
     #flat_room_type_id_#{$i} {
       visibility: hidden;
     }
