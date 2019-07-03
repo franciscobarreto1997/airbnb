@@ -3,12 +3,12 @@ class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
+    @flats = policy_scope(Flat)
     if params[:query].present?
       @flats = Flat.where("address ILIKE ?", "%#{params[:query]}%")
     else
       @flats = Flat.all
     end
-    @flats = policy_scope(Flat)
   end
 
   def show
@@ -25,7 +25,7 @@ class FlatsController < ApplicationController
     @flat.user_id = current_user.id
     authorize @flat
     if @flat.save
-      redirect_to flat_path, notice: "Flat was successfully created"
+      redirect_to flat_path(@flat), notice: "Flat was successfully created"
     else
       render :new
       puts @flat.errors.messages
@@ -45,7 +45,7 @@ class FlatsController < ApplicationController
 
   def destroy
     if @flat.destroy
-      redirect_to categories_path(:query => "Modern"), notice: "Flat was successfully destroyed"
+      redirect_to flats_path, notice: "Flat was successfully destroyed"
     else
       puts @flat.errors.messages
     end
