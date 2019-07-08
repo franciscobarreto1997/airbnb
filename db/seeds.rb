@@ -40,15 +40,52 @@ photos = [
 #   RoomType.create!(name: name)
 # end
 
-14.times do
-  Flat.create!(title: Faker::TvShows::Simpsons.location,
-   description: Faker::Quotes::Shakespeare.hamlet_quote,
-   price: rand(50..350),
-   address: Faker::Address.street_address,
-   user_id: User.first.id,
-   remote_photo_url: photos.sample,
-   acommodates: rand(1..15),
-   home_type_id: rand(5..6),
-   room_type_id: rand(7..9))
-end
+# 14.times do
+#   Flat.create!(title: Faker::TvShows::Simpsons.location,
+#    description: Faker::Quotes::Shakespeare.hamlet_quote,
+#    price: rand(50..350),
+#    street: Faker::Address.street_name,
+#    city: Faker::Address.city,
+#    zip: Faker::Address.zip,
+#    state: Faker::Address.state,
+#    user_id: User.first.id,
+#    remote_photo_url: photos.sample,
+#    acommodates: rand(1..15),
+#    home_type_id: rand(5..6),
+#    room_type_id: rand(7..9))
+# end
+
+Flat.create!(title: "Studio Tram with Courtyard Terrace",
+  description: "Discover the charms of living in the heart of Lisbon's old
+  city while enjoying the conveniences of a renovated flat. The high ceilings,
+  tall windows, and original woodwork are turn-of-the-century, but the kitchen
+  and bathrooms are state-of-the-art.",
+  price: 150,
+  street: "Rua do Conde de Redondo",
+  city: "Lisboa",
+  zip: "1150-103",
+  state: "Lisboa",
+  user_id: User.first.id,
+  remote_photo_url: photos.sample,
+  acommodates: 6,
+  home_type_id: 5,
+  room_type_id: 8)
+
+Flat.create!(title: "Private Spacious Loft",
+  description: "Soak up the natural light spilling into every corner of this
+  spacious 19th-century apartment or kick back in the quiet inner courtyard.
+  This centrally located home effortlessly combines classic vintage with
+  contemporary design and amenities, like free parking, Nespresso machine,
+  free wi-fi and can fit 2 adults + 1 child/baby.",
+  price: 200,
+  street: "Rua de São Bento",
+  city: "Lisboa",
+  zip: "1200-109",
+  state: "Lisboa",
+  user_id: User.first.id,
+  remote_photo_url: photos.sample,
+  acommodates: 6,
+  home_type_id: 5,
+  room_type_id: 8)
+
 

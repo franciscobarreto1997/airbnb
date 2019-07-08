@@ -5,8 +5,14 @@
   <%= f.collection_radio_buttons :room_type_id, RoomType.all, :id, :name  %>
   <%= f.label "Acommodates" %>
   <%= f.select :acommodates, (1..15) %>
-  <%= f.label "Address" %>
-  <%= f.input :address, label: false, required: true %>
+  <%= f.label "Street" %>
+  <%= f.input :street, label: false, required: true %>
+  <%= f.label "City" %>
+  <%= f.input :city, label: false, required: true %>
+  <%= f.label "Zip" %>
+  <%= f.input :zip, label: false, required: true %>
+  <%= f.label "State" %>
+  <%= f.input :state, label: false, required: true %>
   <%= f.label "Title" %>
   <%= f.input :title, label: false, required: true %>
   <%= f.label "Description" %>

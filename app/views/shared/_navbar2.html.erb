@@ -4,13 +4,9 @@
     <%= image_tag "airbnblogocolor2.png", height: 40 %>
   <% end %>
 
-  <%= form_tag flats_path, method: :get, :class => 'form' do %>
-  <%= text_field_tag :query,
-  params[:query],
-  class: "form-control",
-    placeholder: "Search Flats"
-    %>
-    <% end %>
+  <%= form_tag flats_path, method: :get, :class => 'form' do |f| %>
+    <%= text_field_tag :near, nil, placeholder: "Search" %>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right-2 hidden-xs hidden-sm">
