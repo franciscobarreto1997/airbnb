@@ -11,8 +11,14 @@
   <%= f.text_field :description, placeholder: "Describe your place", required: true %>
   <%= f.label "Price (per night)" %>
   <%= f.text_field :price, placeholder: "Enter the price of your place", required: true %>
-  <%= f.label "Address" %>
-  <%= f.text_field :address, placeholder: "Where is your place?" %>
+  <%= f.label "Street" %>
+  <%= f.input :street, label: false, required: true %>
+  <%= f.label "City" %>
+  <%= f.input :city, label: false, required: true %>
+  <%= f.label "Zip" %>
+  <%= f.input :zip, label: false, required: true %>
+  <%= f.label "State" %>
+  <%= f.input :state, label: false, required: true %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :submit, class:"submit" %>

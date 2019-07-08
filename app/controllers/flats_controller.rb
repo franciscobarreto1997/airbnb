@@ -4,10 +4,16 @@ class FlatsController < ApplicationController
 
   def index
     @flats = policy_scope(Flat)
-    if params[:query].present?
-      @flats = Flat.where("address ILIKE ?", "%#{params[:query]}%")
-    else
-      @flats = Flat.all
+    @flats = if params[:near]
+              Flat.near(params[:near]).where.not(latitude: nil, longitude: nil)
+            else
+              Flat.all
+            end
+    @markers = @flats.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
     end
   end
 
@@ -54,7 +60,7 @@ class FlatsController < ApplicationController
   private
 
   def flat_params
-    params.require(:flat).permit(:title, :description, :price, :address,
+    params.require(:flat).permit(:title, :description, :price, :street, :city, :zip, :state,
     :acommodates, :home_type_id, :room_type_id, :category_id, :photo)
   end
 
