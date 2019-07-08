@@ -13,41 +13,44 @@
     right: 0;
     border-bottom: 1px solid #F4F3F1;
   }
-  
-  .navbar-wagon-3 .form-control {
-    width: 25em;
-    color: #484848;
-    margin-top: 10px;
-    box-shadow: 0px 1px 1px 1px #F4F3F1;
-    font-weight: 700;
-  }
-  
-  .navbar-wagon-3 .form-control:hover {
+
+.navbar-wagon-3 #near {
+  width: 25em;
+  color: #484848;
+  margin-top: 10px;
+  box-shadow: 0px 2px 2px 2px #F4F3F1;
+  font-weight: 700;
+  border: 1px solid #EDECEA;
+  border-radius: 5px;
+  height: 45px;
+}
+
+  .navbar-wagon-3 #near:hover {
     box-shadow: 0px 3px 3px 3px #F4F3F1;
   }
-  
-  
-  
+
+
+
   /* Logo */
   .navbar-wagon-brand-3 img {
     height: 50px;
     margin-top: 10px;
   }
-  
+
   /* User Avatar */
   .navbar-wagon-3 .avatar {
     height: 35px;
     width: 35px;
     border-radius: 50%;
   }
-  
+
   /* Right section */
   .navbar-wagon-right-3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  
+
   /* Basic navbar item */
   .navbar-wagon-item-3 {
     cursor: pointer;
@@ -55,7 +58,7 @@
     margin-top: 10px;
     color: #484848;
   }
-  
+
   /* Navbar link */
   .navbar-wagon-link-3 {
     color: #484848;
@@ -69,4 +72,4 @@
     text-decoration: none;
     border-bottom: 2px solid #484848;
   }
-  
+
