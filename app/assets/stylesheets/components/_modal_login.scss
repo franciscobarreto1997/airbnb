@@ -1,0 +1,36 @@
+.form-control {
+    border: 0.5px solid #EBEBEB;
+    box-shadow: none;
+    font-weight: 400;
+    color: #484848;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color:#008489;
+}
+
+.form-check-label {
+    font-weight: 300;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    
+    input {
+        background-color: #FF5A5F;
+        border-radius: 5px;
+        color: white;
+        width: 100%;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

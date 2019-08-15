@@ -20,7 +20,9 @@
           <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item-2 navbar-wagon-link-2" %>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item-2 navbar-wagon-link-2" %>
+      <button type="button" class="navbar-wagon-item-2 navbar-wagon-link-2 login-btn" data-toggle="modal" data-target="#exampleModalCenter">
+        Login
+      </button>
     <% end %>
   </div>
 
