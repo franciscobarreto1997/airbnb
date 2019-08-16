@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :flats, only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  resources :bookings, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :bookings, only: [:show, :create, :destroy]
 
   post 'flats', to: 'flats#create'
 
