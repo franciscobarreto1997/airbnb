@@ -3,7 +3,7 @@
     <h3>Book unique homes and<br>experiences all over the world.</h3>
     <%= render "shared/new_booking" %>
     <%= form_tag flats_path, method: :get, :class => 'form' do |f| %>
-      <%= text_field_tag :near, nil, placeholder: "Search by street,city or country" %>
+      <%= text_field_tag :near, nil, placeholder: "Where" %>
       <%= submit_tag "Search", class: "submit" %>
     <% end %>
   </div>
