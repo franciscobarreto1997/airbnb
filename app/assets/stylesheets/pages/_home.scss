@@ -1,19 +1,49 @@
 // Specific CSS for your home-page
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: 100vh;
-  align-items: center;
   background-image: url('https://res.cloudinary.com/franciscobarreto/image/upload/v1565881412/vlg1oaqohgpvc8dnfd4b.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-position: center;
 }
 
 .pickerbox {
   background-color: white;
+  height: 420px;
+  width: 450px;
+  margin-top: 120px;
+  margin-left: 70px;
+  border-radius: 5px;
+  padding: 40px;
+  h3 {
+    font-weight: 600;
+    color: #484848;
+  }
+  #start_date, #end_date {
+    background-color: white;
+    color: #757575;
+    width: 182px;
+    height: 50px;
+  }
+  .form {
+    margin-top: 25px;
+    #near {
+      border-color: #EBEBEB;
+      color: #757575;
+    }
+    .submit {
+      color: white;
+      margin-left: 270px;
+      margin-top: 30px;
+      background-color: #FF5A5F;
+      border-color: transparent;
+      font-weight: 500;
+      height: 50px;
+      width: 100px;
+      border-radius: 5px;
+    }
+  }
 }
 
 .love {

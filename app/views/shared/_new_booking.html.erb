@@ -1,5 +1,5 @@
-<%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :start_date, as: :string, required: true, label: "CHECK-IN", placeholder: "dd/mm/yyyy", input_html: {id: "start_date"} %>
-  <%= f.input :end_date, as: :string, required: true, label: "CHECK-OUT", placeholder: "dd/mm/yyyy", disabled: true, input_html: {id: "end_date"} %>
+<%= simple_form_for [@flat, @booking], wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+  <%= f.input :start_date, as: :string, required: true, placeholder: "check-in", input_html: {id: "start_date"} %>
+  <%= f.input :end_date, as: :string, required: true, placeholder: "check-out ", disabled: true, input_html: {id: "end_date"} %>
 <% end %>
 
