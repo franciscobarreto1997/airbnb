@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   helper ContentHelper
   def home
     @flats = Flat.all
+    @booking = Booking.new
   end
 end

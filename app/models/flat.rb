@@ -20,4 +20,10 @@ class Flat < ApplicationRecord
   def address_changed?
     street_changed? || city_changed? || zip_changed? || state_changed?
   end
+
+  def unavailable_dates
+    bookings.pluck(:start_date, :end_date).map do |range|
+      { from: range[0], to: range[1] }
+    end
+  end
 end

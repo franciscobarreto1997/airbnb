@@ -1,11 +1,13 @@
 <div class="container">
-<%= video_tag "waves.mp4", :controls => false, :autoplay => true, :loop => true, muted: true %>
-  <h1>Book unique homes and<br>experiences all over the world.</h1>
-  <%= form_tag flats_path, method: :get, :class => 'form' do |f| %>
-    <%= text_field_tag :near, nil, placeholder: "Search by street,city or country" %>
-    <%= submit_tag "Search", class: "submit" %>
-  <% end %>
- <%= render "shared/modal_login" %>
+  <div class="pickerbox">
+    <h3>Book unique homes and<br>experiences all over the world.</h3>
+    <%= render "shared/new_booking" %>
+    <%= form_tag flats_path, method: :get, :class => 'form' do |f| %>
+      <%= text_field_tag :near, nil, placeholder: "Search by street,city or country" %>
+      <%= submit_tag "Search", class: "submit" %>
+    <% end %>
+  </div>
+  <%= render "shared/modal_login" %>
   <div class="love">
     <p>Made with <i class="fas fa-heart"></i> by Francisco Barreto</p>
   </div>
