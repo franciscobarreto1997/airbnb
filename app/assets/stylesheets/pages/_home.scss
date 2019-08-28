@@ -49,6 +49,7 @@
       color: #757575;
       width: 182px;
       height: 50px;
+      display: inline-block;
     }
     .form {
       margin-top: 25px;
@@ -129,13 +130,15 @@
     #start_date, #end_date {
       background-color: white;
       color: #757575;
-      width: 45%;
+      width: 49%;
       height: 50px;
+      display: inline-block;
     }
     .form {
       #near {
         border-color: #EBEBEB;
         color: #757575;
+        margin-top: 20px;
       }
       .submit {
         color: white;
@@ -145,6 +148,11 @@
         height: 50px;
         width: 100%;
         border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      .ap-input-icon {
+        margin-top: 20px;
       }
     }
   }
