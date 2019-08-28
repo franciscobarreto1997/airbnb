@@ -1,4 +1,11 @@
 <div class="container">
+  <div class="background-image">
+  <h3>Book unique homes and experiences all over the world.</h3>
+    <div class="love">
+      <p>Made with <i class="fas fa-heart"></i> by Francisco Barreto</p>
+    </div>
+  </div>
+  <%= render "shared/modal_login" %>
   <div class="pickerbox">
     <h3>Book unique homes and<br>experiences all over the world.</h3>
     <%= render "shared/new_booking" %>
@@ -6,9 +13,5 @@
       <%= text_field_tag :near, nil, placeholder: "Where" %>
       <%= submit_tag "Search", class: "submit" %>
     <% end %>
-  </div>
-  <%= render "shared/modal_login" %>
-  <div class="love">
-    <p>Made with <i class="fas fa-heart"></i> by Francisco Barreto</p>
   </div>
 </div>
