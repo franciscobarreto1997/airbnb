@@ -1,55 +1,151 @@
-// Specific CSS for your home-page
-.container {
-  width: 100%;
-  height: 100vh;
-  background-image: url('https://res.cloudinary.com/franciscobarreto/image/upload/v1565881412/vlg1oaqohgpvc8dnfd4b.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.pickerbox {
-  background-color: white;
-  height: 420px;
-  width: 450px;
-  margin-top: 120px;
-  margin-left: 70px;
-  border-radius: 5px;
-  padding: 40px;
-  h3 {
-    font-weight: 600;
-    color: #484848;
+@media (min-width: 736px) {
+  .container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
   }
-  #start_date, #end_date {
+
+  .love {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    color: white;
+    font-size: 15px;
+  }
+
+  .background-image {
+    background-image: url('https://res.cloudinary.com/franciscobarreto/image/upload/v1565881412/vlg1oaqohgpvc8dnfd4b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 100%;
+    // height: 100vh;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    h3 {
+      display: none;
+    }
+  }
+
+  .pickerbox {
     background-color: white;
-    color: #757575;
-    width: 182px;
-    height: 50px;
-  }
-  .form {
-    margin-top: 25px;
-    #near {
-      border-color: #EBEBEB;
-      color: #757575;
+    height: 420px;
+    width: 450px;
+    top: 120px;
+    left: 85px;
+    position: absolute;
+    border-radius: 5px;
+    padding: 40px;
+    z-index: 1;
+    h3 {
+      font-weight: 600;
+      color: #484848;
     }
-    .submit {
-      color: white;
-      margin-left: 270px;
-      margin-top: 30px;
-      background-color: #FF5A5F;
-      border-color: transparent;
-      font-weight: 500;
+    #start_date, #end_date {
+      background-color: white;
+      color: #757575;
+      width: 182px;
       height: 50px;
-      width: 100px;
-      border-radius: 5px;
+    }
+    .form {
+      margin-top: 25px;
+      #near {
+        border-color: #EBEBEB;
+        color: #757575;
+      }
+      .submit {
+        color: white;
+        margin-left: 270px;
+        margin-top: 30px;
+        background-color: #FF5A5F;
+        border-color: transparent;
+        font-weight: 500;
+        height: 50px;
+        width: 100px;
+        border-radius: 5px;
+      }
     }
   }
 }
 
-.love {
-  position: absolute;
-  right: 25px;
-  bottom: 0;
-  color: white;
-  font-size: 15px;
+
+@media (max-width: 736px) {
+  .navbar-wagon {
+    z-index: 2;
+  }
+  .container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .love {
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+    color: white;
+    font-size: 15px;
+  }
+
+  .background-image {
+    text-align: center;
+    position: relative;
+    background-image: url('https://res.cloudinary.com/franciscobarreto/image/upload/v1565881412/vlg1oaqohgpvc8dnfd4b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    // width: 100%;
+    // height: 100vh;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    h3 {
+      position: absolute;
+      color: white;
+      font-weight: bold;
+      bottom: 0;
+    }
+    p {
+      display: none;
+    }
+  }
+
+  .pickerbox {
+    background-color: white;
+    padding: 20px;
+    z-index: 1;
+    grid-column: 1/3;
+    grid-row: 3/5;
+    h3 {
+      display: none;
+      font-weight: 600;
+      color: #484848;
+    }
+    #start_date, #end_date {
+      background-color: white;
+      color: #757575;
+      width: 45%;
+      height: 50px;
+    }
+    .form {
+      #near {
+        border-color: #EBEBEB;
+        color: #757575;
+      }
+      .submit {
+        color: white;
+        background-color: #FF5A5F;
+        border-color: transparent;
+        font-weight: 500;
+        height: 50px;
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
 }
