@@ -7,7 +7,7 @@ const initFlatPickr = () => {
     const startPicker = flatpickr(startDateSelector, {
         minDate: 'today',
         dateFormat: 'd-m-Y',
-        disableMobile: 'false',
+        disableMobile: 'true',
         onChange: function(selectedDates, selectedDate) {
           // DO SOMETHING
           console.log(selectedDate)
@@ -22,6 +22,7 @@ const initFlatPickr = () => {
       const endPicker = flatpickr(endDateSelector, {
         minDate: 'today',
         dateFormat: 'd-m-Y',
+        disableMobile: 'true',
         onChange: function(selectedDates, selectedDate) {
           // DO SOMETHING
           
