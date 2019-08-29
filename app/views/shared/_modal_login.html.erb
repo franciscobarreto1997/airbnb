@@ -1,4 +1,4 @@
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="exampleModalCenterLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -17,6 +17,14 @@
             <%= f.button :submit, "Log in" %>
           </div>
         <% end %>
+      </div>
+      <div class="modal-footer">
+      <div class="modal-footer-link">
+          <p>Don't have an account yet?</p>
+          <button type="button" class="modal-footer-button" data-toggle="modal" data-dismiss="modal" data-target="#exampleModalCenterSignup">
+            Sign up
+          </button>
+        </div>
       </div>
     </div>
   </div>
