@@ -28,6 +28,28 @@
     }
 }
 
+.modal-footer p {
+    color:#484848;
+    margin: 0;
+}
+
+.modal-footer-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-footer-button {
+    background-color: transparent;
+    color: #008489;
+    font-weight: 500;
+    border: none;
+    text-decoration: none;
+    padding: 0;
+    margin-left: 5px;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
